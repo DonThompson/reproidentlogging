@@ -1,5 +1,6 @@
 
 using api_logic;
+using Microsoft.Identity.Web;
 
 namespace reproidentlogging;
 
@@ -15,6 +16,10 @@ public class Program
         string s = SampleAPILogic.ReturnAString();
         Console.WriteLine(s);
         //end dummy code
+
+        //repro use of Identity.Web
+        builder.Services.AddMicrosoftIdentityWebApiAuthentication(builder.Configuration);
+        //end use
 
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
