@@ -1,4 +1,6 @@
 
+using api_logic;
+
 namespace reproidentlogging;
 
 public class Program
@@ -8,6 +10,11 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
+
+        //dummy code to reference api-logic project
+        string s = SampleAPILogic.ReturnAString();
+        Console.WriteLine(s);
+        //end dummy code
 
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
